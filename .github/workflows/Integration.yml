@@ -51,7 +51,7 @@ jobs:
           echo "$HOME/.local/bin" >> $GITHUB_PATH
 
       - name: Install dependencies
-        run: npm install
+        run: npm --prefix tests/ install
       - uses: ./.github/actions/install-rust
         with:
           toolchain: ${{ matrix.rust }}
