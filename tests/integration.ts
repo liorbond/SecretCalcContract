@@ -146,7 +146,7 @@ async function initializeAndUploadContract() {
   console.log(`got tokens from faucet: ${balance}`);
   const [contractHash, contractAddress] = await initializeContract(
     client,
-    "../contract.wasm"
+    "contract.wasm"
   );
 
   var clientInfo: [SecretNetworkClient, string, string] = [
