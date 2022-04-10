@@ -51,7 +51,7 @@ jobs:
           chmod +x $HOME/.local/bin/sccache
           echo "$HOME/.local/bin" >> $GITHUB_PATH
       - name: Install dependencies
-        run: ls -l -R /home/runner/work/SecretCalcContract; npm --prefix tests/ install
+        run: npm --prefix tests/ install
       - uses: ./.github/actions/install-rust
         with:
           toolchain: ${{ matrix.rust }}
