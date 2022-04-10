@@ -17,7 +17,7 @@ fn try_add<S: Storage, A: Api, Q: Querier>(
 ) -> StdResult<HandleResponse> {
     let mut status = String::from("");
     let mut response = "".to_string();
-    let non_checked_result = eq.x.u128().checked_add(eq.y.u128());
+    let non_checked_result = eq.x.u128().checked_mul(eq.y.u128());
     match non_checked_result {
         None => {
             status = String::from("Add overflow");
